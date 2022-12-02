@@ -1,4 +1,56 @@
 #Practice session 16
 
-#Question-1
 
+'''
+#Question-3
+t1,t2=[],[]
+print('Team-1')
+for i in range(20):
+    t1.append(input(f'Enter name of player {i+1}: '))
+print('-'*20)
+print()
+print('Team-2')
+for i in range(20):
+    t2.append(input(f'Enter name of player {i+1}: r'))
+print('Players in Team-1:')
+for i in range(len(t1)):
+    print(f'{i+1}.{t1[i]}')
+print('-'*20)
+print()
+print('Players in Team-2:')
+for i in range(len(t2)):
+    print(f'{i+1}.{t2[i]}')
+'''
+
+#Question-2
+
+#Question-1
+dic={1:input('Enter value-1: '),2:input('Enter value-2: '),3:input('Enter value-3: '),4:input('Enter value-4: '),5:input('Enter value-5: ')}
+l = [1,2,3,4,5]
+r = list(dict.fromkeys(l))
+d=(len(l)-len(r))
+if d == 0:
+    count = (5*4*3*2*1)
+elif d > 0:
+    count = (5*4*3*2*1)/d
+p=[]
+for i in dic:
+    for j in dic:
+        for k in dic:
+            for l in dic:
+                for m in dic:
+                    if len(list(dict.fromkeys([i,j,k,l,m]))) == 5:
+                        c = [dic[i],dic[j],dic[k],dic[l],dic[m]]
+                        if c in p:
+                            pass
+                        else:
+                            p.append(c)
+                        if len(p) == count:
+                            break
+                        else:
+                            pass
+                    else:
+                        pass
+#print(len(p))
+for i in p:
+    print(*i)
